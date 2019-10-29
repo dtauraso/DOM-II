@@ -87,6 +87,8 @@ my_destination_image.addEventListener("contextmenu", () => {
 // mouseenter
 // dblclick
 // contextmenu
+// mouseup
+// mousemove
 
 // 2 more left
 // 9
@@ -99,9 +101,29 @@ my_nav_bar.addEventListener("mouseup", () => {
 
     my_nav_bar.children[my_nav_bar.children.length - 1].style.color = "green"
 })
+
+my_nav_bar.childNodes.forEach(nav_item => {
+    // can pass an event in the callback
+    nav_item.addEventListener("click", (event) => {
+
+        event.preventDefault()
+    })
+})
 // 10 change text to lorem lala for a single passage when clicked
 let my_lets_go_passage = document.querySelector(".text-content").children[1]
 
 my_lets_go_passage.addEventListener("mousemove", () => {
     my_lets_go_passage.textContent = "lorem lala"
 })
+
+// my 10 distinct events
+// mouseover
+// click
+// mouseleave
+// keydown
+// wheel
+// mouseenter
+// dblclick
+// contextmenu
+// mouseup
+// mousemove
