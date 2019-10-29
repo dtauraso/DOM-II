@@ -3,6 +3,7 @@
 // 1
 // make signup buttons enlarge and shrink
 // no propigation(reguarding event 5)
+// the parent object has a click event too
 let mysignup_buttons = document.querySelectorAll(".btn").forEach(item => {
     // console.log(item)
     item.addEventListener("mouseover", () => {
@@ -94,12 +95,14 @@ my_destination_image.addEventListener("contextmenu", () => {
 // 9
 // show another link when at a certain place in the nav bar
 let my_nav_bar = document.querySelector(".nav")
-my_nav_bar.addEventListener("mouseup", () => {
+my_nav_bar.addEventListener("copy", (event) => {
     console.log(my_nav_bar.children)
     my_nav_bar.appendChild(document.createElement("a"))
     my_nav_bar.children[my_nav_bar.children.length - 1].textContent = "added link"
 
     my_nav_bar.children[my_nav_bar.children.length - 1].style.color = "green"
+
+    // event.stopPropagation()
 })
 
 my_nav_bar.childNodes.forEach(nav_item => {
