@@ -63,15 +63,45 @@ my_fun_bus_icon.addEventListener("mouseenter", () => {
     my_fun_bus_icon.setAttribute("style", "transform: rotate(90deg)")
 
 })
-// have 7 as of here
+// have 6 as of here
 // 7 change background color for footer
+// 7th unique one
+let my_footer = document.querySelector(".footer")
+my_footer.addEventListener("dblclick", () => {
 
+    my_footer.setAttribute("style", "background-color: red")
+})
 // 8
-// have the destination image change to the buss image when clicked
+// have the destination image change to the bus image when clicked
+let my_destination_image = document.querySelector(".content-destination").children[2]
+console.log(my_destination_image)
+my_destination_image.addEventListener("contextmenu", () => {
+    console.log("contextmenu")
+    my_destination_image.setAttribute("src", "img/fun-bus.jpg")
+})
+// mouseover
+// click
+// mouseleave
+// keydown
+// wheel
+// mouseenter
+// dblclick
+// contextmenu
 
+// 2 more left
 // 9
 // show another link when at a certain place in the nav bar
+let my_nav_bar = document.querySelector(".nav")
+my_nav_bar.addEventListener("mouseup", () => {
+    console.log(my_nav_bar.children)
+    my_nav_bar.appendChild(document.createElement("a"))
+    my_nav_bar.children[my_nav_bar.children.length - 1].textContent = "added link"
 
+    my_nav_bar.children[my_nav_bar.children.length - 1].style.color = "green"
+})
 // 10 change text to lorem lala for a single passage when clicked
+let my_lets_go_passage = document.querySelector(".text-content").children[1]
 
-
+my_lets_go_passage.addEventListener("mousemove", () => {
+    my_lets_go_passage.textContent = "lorem lala"
+})
